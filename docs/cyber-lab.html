@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Oma kyberturvalaboratorio:
+          Proxmox, OPNsense, Linux, TCP/IP,
+          Wireshark ja AdGuard Home + Unbound DNS.">
+
+    <meta name="theme-color" content="#0b1220">
+
+    <title>Cybersecurity Lab | V.DEV</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Siirry sisältöön</a>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a class="brand" href="index.html">
+            V<span class="accent">.</span>DEV
+            <span class="brand-subtitle">
+                SOFTWARE & SECURITY
+            </span>
+        </a>
+
+        <nav class="nav" aria-label="Päävalikko">
+            <a href="index.html">Etusivu</a>
+            <a href="projects.html">Projektit</a>
+            <a href="mysql-siem.html">MySQL-SIEM</a>
+            <a href="cyber-lab.html" aria-current="page">Cyber Lab</a>
+            <a href="skills.html">Osaaminen</a>
+            <a href="about.html">Minusta</a>
+
+            <a class="nav-github"
+               href="https://github.com/valtteri-cybersecurity"
+               target="_blank"
+               rel="noopener noreferrer">GitHub ↗</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main id="main">
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Etusivu</a> /
+                Cyber Lab
+            </div>
+
+            <span class="eyebrow">
+                Home Infrastructure
+            </span>
+
+            <h1>
+                My Cybersecurity
+                <span class="accent">Lab.</span>
+            </h1>
+
+            <p>
+                Oma oppimis- ja testausympäristö
+                Linux-järjestelmille, tietoverkoille,
+                virtualisoinnille sekä kyberturvallisuuden
+                käytännön harjoittelulle.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Proxmox</span>
+                <span class="tag">OPNsense</span>
+                <span class="tag">Linux</span>
+                <span class="tag">DNS</span>
+                <span class="tag">Wireshark</span>
+                <span class="tag">TCP/IP</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LAB YLEISESTI -->
+
+    <section class="section section-soft">
+
+        <div class="container two-columns">
+
+            <div>
+
+                <span class="eyebrow">
+                    Lab Overview
+                </span>
+
+                <h2>Miksi rakensin oman laboratorion?</h2>
+
+                <p class="muted">
+                    Haluan ymmärtää, kuinka
+                    Linux-palvelimet, tietoverkot,
+                    palomuurit ja sovellukset
+                    toimivat yhdessä.
+                </p>
+
+                <p class="muted">
+                    Oma ympäristö mahdollistaa
+                    palveluiden asentamisen,
+                    verkkoliikenteen analysoinnin,
+                    järjestelmien ylläpidon ja
+                    tietoturvatyökalujen testaamisen.
+                </p>
+
+            </div>
+
+            <div class="info-panel">
+
+                <h3>Laboratorion käyttötarkoitukset</h3>
+
+                <ul class="feature-list">
+                    <li>Linux-palvelinten hallinta</li>
+                    <li>Virtuaalikoneiden ylläpito</li>
+                    <li>Palomuurien ja verkkojen harjoittelu</li>
+                    <li>DNS-palveluiden ylläpito</li>
+                    <li>Verkkopakettien analysointi</li>
+                    <li>Tietoturvatapahtumien valvonta</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- INFRASTRUKTUURI -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Infrastructure
+                </span>
+
+                <h2>Laboratorion teknologiat</h2>
+
+                <p>
+                    Laboratorion tärkeimmät komponentit
+                    ja niiden tehtävät.
+                </p>
+
+            </div>
+
+            <div class="grid grid-2">
+
+                <article class="card">
+
+                    <div class="card-icon">PVE</div>
+
+                    <h3>Proxmox VE</h3>
+
+                    <p>
+                        Virtualisointiympäristö
+                        Linux-virtuaalikoneiden
+                        ja testipalvelinten hallintaan.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>Virtuaalikoneet</li>
+                        <li>KVM-virtualisointi</li>
+                        <li>Resurssien hallinta</li>
+                        <li>Testiympäristöjen rakentaminen</li>
+                    </ul>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-icon">FW</div>
+
+                    <h3>OPNsense Firewall</h3>
+
+                    <p>
+                        Palomuuri- ja reititysympäristö,
+                        jonka avulla harjoittelen
+                        tietoverkon suojaamista.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>Palomuurisäännöt</li>
+                        <li>Verkkoliikenteen hallinta</li>
+                        <li>Reititys</li>
+                        <li>Verkkosegmentoinnin periaatteet</li>
+                    </ul>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-icon">DNS</div>
+
+                    <h3>AdGuard Home + Unbound</h3>
+
+                    <p>
+                        Oma DNS-palvelin,
+                        jossa AdGuard Home huolehtii
+                        DNS-kyselyiden käsittelystä
+                        ja suodatuksesta.
+                    </p>
+
+                    <p>
+                        Unbound toimii
+                        DNS-nimenselvityksen
+                        taustakomponenttina.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>DNS-kyselyt</li>
+                        <li>DNS-suodatus</li>
+                        <li>Unbound Resolver</li>
+                        <li>Linux-palvelimen ylläpito</li>
+                    </ul>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-icon">PCAP</div>
+
+                    <h3>Wireshark & TCP/IP</h3>
+
+                    <p>
+                        Verkkoliikenteen tutkiminen
+                        pakettikaappausten avulla.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>TCP-yhteyksien analysointi</li>
+                        <li>DNS-pakettien tutkiminen</li>
+                        <li>Verkkoprotokollat</li>
+                        <li>Verkko-ongelmien selvittäminen</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- DNS KAAVIO -->
+
+    <section class="section section-soft">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    DNS Architecture
+                </span>
+
+                <h2>Oma DNS-ratkaisuni</h2>
+
+                <p>
+                    Yksinkertaistettu esimerkki siitä,
+                    miten nimenselvitys voi kulkea
+                    AdGuard Home- ja Unbound-palveluiden
+                    kautta.
+                </p>
+
+            </div>
+
+            <div class="pipeline">
+
+                <div class="flow-node">
+                    <strong>Client Device</strong>
+                    <small>Linux / Workstation / VM</small>
+                </div>
+
+                <div class="flow-arrow"
+                     aria-hidden="true">↓</div>
+
+                <div class="flow-node flow-node-accent">
+                    <strong>AdGuard Home</strong>
+                    <small>
+                        DNS Filtering · Query Handling
+                    </small>
+                </div>
+
+                <div class="flow-arrow"
+                     aria-hidden="true">↓</div>
+
+                <div class="flow-node">
+                    <strong>Unbound</strong>
+                    <small>DNS Resolution</small>
+                </div>
+
+                <div class="flow-arrow"
+                     aria-hidden="true">↓</div>
+
+                <div class="flow-node">
+                    <strong>DNS Infrastructure</strong>
+                    <small>External Name Resolution</small>
+                </div>
+
+            </div>
+
+            <p class="diagram-note">
+                Käsitteellinen DNS-kyselyn kulku.
+                Suodatettu kysely voidaan pysäyttää
+                jo AdGuard Homessa, ja välimuistissa
+                oleva vastaus voidaan palauttaa
+                ilman ulkoista kyselyä.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- LINUX -->
+
+    <section class="section">
+
+        <div class="container two-columns">
+
+            <div>
+
+                <span class="eyebrow">
+                    Linux Administration
+                </span>
+
+                <h2>Linux laboratoriossa</h2>
+
+                <p class="muted">
+                    Käytän Linux-järjestelmiä
+                    palvelinten ylläpitämiseen,
+                    ohjelmistojen kehittämiseen
+                    ja verkkopalveluiden rakentamiseen.
+                </p>
+
+                <p class="muted">
+                    Työskentelen erityisesti Ubuntu-
+                    ja Debian-pohjaisissa ympäristöissä,
+                    mutta tutkin myös muita Linux-jakeluja.
+                </p>
+
+            </div>
+
+            <div class="terminal">
+
+                <div class="terminal-top">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="terminal-title">
+                        linux-admin
+                    </span>
+                </div>
+
+                <div class="terminal-body">
+
+                    <p class="terminal-line">
+                        <span class="terminal-prompt">
+                            admin@linux:~$
+                        </span>
+                        systemctl status ssh
+                    </p>
+
+                    <p class="terminal-output">
+                        ● ssh.service
+                    </p>
+
+                    <br>
+
+                    <p class="terminal-line">
+                        <span class="terminal-prompt">
+                            admin@linux:~$
+                        </span>
+                        ip route
+                    </p>
+
+                    <p class="terminal-comment">
+                        # Routing table
+                    </p>
+
+                    <br>
+
+                    <p class="terminal-line">
+                        <span class="terminal-prompt">
+                            admin@linux:~$
+                        </span>
+                        journalctl -xe
+                    </p>
+
+                    <p class="terminal-comment">
+                        # System logs
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <span>© 2026 Valtteri · Software & Security</span>
+
+        <div class="footer-links">
+            <a href="index.html">Etusivu</a>
+            <a href="projects.html">Projektit</a>
+            <a href="mysql-siem.html">MySQL-SIEM</a>
+            <a href="about.html">Minusta</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

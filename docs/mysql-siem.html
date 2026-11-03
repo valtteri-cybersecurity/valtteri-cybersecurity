@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1220">
+
+    <meta name="description"
+          content="MySQL-SIEM on Pythonilla ja MySQL:llä
+          kehitetty Linux-tietoturvavalvontaprojekti.">
+
+    <title>MySQL-SIEM | V.DEV</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Siirry sisältöön</a>
+
+<!-- NAVIGAATIO -->
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a class="brand" href="index.html">
+            V<span class="accent">.</span>DEV
+            <span class="brand-subtitle">
+                SOFTWARE & SECURITY
+            </span>
+        </a>
+
+        <nav class="nav" aria-label="Päävalikko">
+            <a href="index.html">Etusivu</a>
+            <a href="projects.html">Projektit</a>
+
+            <a href="mysql-siem.html" aria-current="page">
+                MySQL-SIEM
+            </a>
+
+            <a href="cyber-lab.html">Cyber Lab</a>
+            <a href="skills.html">Osaaminen</a>
+            <a href="about.html">Minusta</a>
+
+            <a class="nav-github"
+               href="https://github.com/valtteri-cybersecurity"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main id="main">
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Etusivu</a> /
+                <a href="projects.html">Projektit</a> /
+                MySQL-SIEM
+            </div>
+
+            <span class="eyebrow">
+                Featured Security Engineering Project
+            </span>
+
+            <h1>
+                MySQL<span class="accent">-SIEM.</span>
+            </h1>
+
+            <p>
+                Python-based Linux Security Monitoring System
+            </p>
+
+            <p>
+                Itse kehittämäni Linux-tietoturvavalvontajärjestelmä,
+                joka yhdistää Python-ohjelmoinnin,
+                MySQL-tietokannat, Linux-järjestelmät
+                ja tietoturva-analyysin.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Linux</span>
+                <span class="tag">SIEM</span>
+                <span class="tag">Auditd</span>
+                <span class="tag">UFW</span>
+                <span class="tag">Pytest</span>
+            </div>
+
+            <div class="button-row">
+                <a class="button button-primary"
+                   href="https://github.com/valtteri-cybersecurity/mysql_siem"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub – Source Code ↗
+                </a>
+
+                <a class="button button-outline"
+                   href="projects.html">
+                    Kaikki projektit →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJEKTIN TARKOITUS -->
+
+    <section class="section section-soft">
+        <div class="container two-columns">
+
+            <div>
+                <span class="eyebrow">Project Overview</span>
+
+                <h2>Mikä MySQL-SIEM on?</h2>
+
+                <p class="muted">
+                    MySQL-SIEM on Pythonilla kehittämäni
+                    Linux-järjestelmien valvonta- ja
+                    tietoturva-analyysiohjelmisto.
+                </p>
+
+                <p class="muted">
+                    Järjestelmä kerää tietoturvatapahtumia,
+                    lokitietoja ja järjestelmämetriikkaa.
+                    Kerätty tieto tallennetaan
+                    MySQL-tietokantaan.
+                </p>
+
+                <p class="muted">
+                    Tietokantaan tallennettuja tapahtumia
+                    voidaan analysoida ja hyödyntää
+                    epäilyttävän toiminnan tunnistamiseen.
+                </p>
+
+                <p class="muted">
+                    Projektissa keskityn myös
+                    ohjelmiston luotettavuuteen,
+                    testaukseen, päivitettävyyteen
+                    ja tietokannan turvalliseen käsittelyyn.
+                </p>
+            </div>
+
+            <div class="info-panel">
+                <h3>Project Information</h3>
+
+                <ul class="feature-list">
+                    <li>Programming Language: Python</li>
+                    <li>Database: MySQL</li>
+                    <li>Operating System: Linux</li>
+                    <li>Version Control: Git</li>
+                    <li>Testing: Pytest</li>
+                    <li>Status: Active Development</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ARKKITEHTUURI -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">
+                    System Architecture
+                </span>
+
+                <h2>Järjestelmän arkkitehtuuri</h2>
+
+                <p>
+                    Ohjelmisto koostuu tietojen
+                    keräämisestä, käsittelystä,
+                    tietokantatallennuksesta ja
+                    turvallisuusanalyysistä.
+                </p>
+            </div>
+
+            <div class="pipeline">
+
+                <div class="flow-node">
+                    <strong>Linux Systems</strong>
+                    <small>
+                        Ubuntu · Debian · Linux Mint
+                    </small>
+                </div>
+
+                <div class="flow-arrow"
+                     aria-hidden="true">↓</div>
+
+                <div class="flow-grid">
+                    <div class="flow-node">Auth Logs</div>
+                    <div class="flow-node">UFW Logs</div>
+                    <div class="flow-node">Audit Events</div>
+                    <div class="flow-node">Processes</div>
+                    <div class="flow-node">Services</div>
+                    <div class="flow-node">System / FS</div>
+                </div>
+
+                <div class="flow-arrow"
+                     aria-hidden="true">↓</div>
+
+                <div class="flow-node flow-node-accent">
+                    <strong>Python Collectors</strong>
+                    <small>
+                        Collection · Parsing · Validation
+                    </small>
+                </div>
+
+                <div class="flow-arrow"
+                     aria-hidden="true">↓</div>
+
+                <div class="flow-node">
+                    <strong>MySQL Database</strong>
+                    <small>
+                        Events · Metrics · Collector State
+                    </small>
+                </div>
+
+                <div class="flow-arrow"
+                     aria-hidden="true">↓</div>
+
+                <div class="flow-node flow-node-accent">
+                    <strong>Security Analysis & Detection</strong>
+                    <small>
+                        Detection Rules · Security Findings
+                    </small>
+                </div>
+
+            </div>
+
+            <p class="diagram-note">
+                Yksinkertaistettu järjestelmäarkkitehtuuri.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- KERÄÄJÄT -->
+
+    <section class="section section-soft">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Data Collection</span>
+                <h2>Järjestelmän kerääjät</h2>
+
+                <p>
+                    Kerääjät käsittelevät erilaisia
+                    Linux-järjestelmien tapahtumia
+                    ja tilatietoja.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+
+                <article class="card">
+                    <div class="card-icon">AUTH</div>
+                    <h3>Authentication</h3>
+                    <p>
+                        Kirjautumistapahtumien ja
+                        SSH-tunnistautumisten seuranta.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">UFW</div>
+                    <h3>Firewall</h3>
+                    <p>
+                        UFW-palomuurin verkkotapahtumien
+                        kerääminen ja analysointi.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">AUD</div>
+                    <h3>Audit</h3>
+                    <p>
+                        Linuxin auditointitapahtumien
+                        ja tietoturvakriittisten
+                        muutosten seuranta.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">SYS</div>
+                    <h3>System Metrics</h3>
+                    <p>
+                        Järjestelmän suorittimen,
+                        muistin ja muiden resurssien
+                        käytön seuranta.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">FS</div>
+                    <h3>Filesystem</h3>
+                    <p>
+                        Tallennustilan käytön ja
+                        tiedostojärjestelmän tilan seuranta.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">PROC</div>
+                    <h3>Processes & Services</h3>
+                    <p>
+                        Prosessien ja Linux-palveluiden
+                        tilatietojen kerääminen.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DETECTION -->
+
+    <section class="section">
+        <div class="container two-columns">
+
+            <div>
+                <span class="eyebrow">Threat Detection</span>
+
+                <h2>Hyökkäysten tunnistaminen</h2>
+
+                <p class="muted">
+                    MySQL-SIEM sisältää tunnistuslogiikkaa,
+                    jolla voidaan havaita tiettyjä
+                    epäilyttäviä toimintamalleja.
+                </p>
+
+                <p class="muted">
+                    Esimerkiksi toistuvat epäonnistuneet
+                    SSH-kirjautumiset voivat viitata
+                    brute-force-hyökkäykseen.
+                </p>
+
+                <p class="muted">
+                    Lyhyessä ajassa useisiin portteihin
+                    kohdistuvat yhteysyritykset voivat
+                    puolestaan viitata porttiskannaukseen.
+                </p>
+            </div>
+
+            <div class="info-panel">
+                <h3>Detection Examples</h3>
+
+                <ul class="feature-list">
+                    <li>SSH Brute-Force Detection</li>
+                    <li>Port Scan Detection</li>
+                    <li>Source IP Analysis</li>
+                    <li>Targeted Port Analysis</li>
+                    <li>Security Event Statistics</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- MYSQL -->
+
+    <section class="section section-soft">
+        <div class="container two-columns">
+
+            <div>
+                <span class="eyebrow">Database Engineering</span>
+
+                <h2>MySQL järjestelmän perustana</h2>
+
+                <p class="muted">
+                    MySQL toimii MySQL-SIEMin
+                    keskeisenä tietovarastona.
+                </p>
+
+                <p class="muted">
+                    Tietokantaan tallennetaan
+                    tietoturvatapahtumia,
+                    järjestelmämetriikkaa
+                    sekä kerääjien jatkuvuustietoja.
+                </p>
+
+                <p class="muted">
+                    Tietokantamigraatioilla
+                    hallitaan tietokantarakenteen
+                    muutoksia järjestelmän
+                    kehittyessä.
+                </p>
+            </div>
+
+            <div class="info-panel">
+                <h3>Database Features</h3>
+
+                <ul class="feature-list">
+                    <li>Relational Data Storage</li>
+                    <li>Security Event Storage</li>
+                    <li>Collector State Tracking</li>
+                    <li>SQL-based Analysis</li>
+                    <li>Database Migrations</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TESTAUS -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">
+                    Engineering & Reliability
+                </span>
+
+                <h2>Testaus ja luotettavuus</h2>
+
+                <p>
+                    MySQL-SIEMin kehityksessä
+                    painotan järjestelmän toimintavarmuutta
+                    ja tietojen säilyttämistä.
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+
+                <article class="card">
+                    <div class="card-icon">TEST</div>
+                    <h3>Automated Testing</h3>
+
+                    <p>
+                        Pytest-testit varmistavat
+                        ohjelmiston toimintoja
+                        ja auttavat ehkäisemään
+                        muutoksista syntyviä virheitä.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">DB</div>
+                    <h3>Database Migrations</h3>
+
+                    <p>
+                        Migraatioiden tavoitteena on
+                        mahdollistaa hallitut päivitykset
+                        vaarantamatta olemassa olevaa dataa.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">BAK</div>
+                    <h3>Backup & Recovery</h3>
+
+                    <p>
+                        Varmuuskopiointi ja
+                        palautuksen testaus
+                        tukevat turvallista
+                        päivitysprosessia.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">LX</div>
+                    <h3>Linux Compatibility</h3>
+
+                    <p>
+                        Asennuksia on testattu
+                        Ubuntu 24.04-, Ubuntu 26.04-,
+                        Debian 13- ja Linux Mint
+                        -ympäristöissä.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ROADMAP -->
+
+    <section class="section section-soft">
+        <div class="container">
+
+            <span class="eyebrow">
+                Future Development
+            </span>
+
+            <h2>Projektin tulevaisuus</h2>
+
+            <p class="muted">
+                MySQL-SIEMin pitkän aikavälin
+                tavoitteena on kehittyä
+                monipuoliseksi Linux-tietoturvapalveluksi.
+            </p>
+
+            <div class="highlight">
+
+                <strong>Suunnitteilla:</strong>
+
+                <ul>
+                    <li>Laajempi tietoturva-analyysi</li>
+                    <li>Hallintarajapinta</li>
+                    <li>Automaattinen raportointi</li>
+                    <li>Tekoälyavusteinen analyysi</li>
+                    <li>IDS/IPS-ominaisuuksien tutkiminen</li>
+                </ul>
+
+                <p>
+                    Nämä ovat kehitystavoitteita,
+                    eivät vielä valmiita ominaisuuksia.
+                </p>
+
+            </div>
+
+            <div class="button-row">
+
+                <a class="button button-primary"
+                   href="https://github.com/valtteri-cybersecurity/mysql_siem"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Tutustu lähdekoodiin ↗
+                </a>
+
+                <a class="button button-outline"
+                   href="projects.html">
+                    Muut projektit →
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+
+        <span>
+            © 2026 Valtteri · Software & Security
+        </span>
+
+        <div class="footer-links">
+            <a href="index.html">Etusivu</a>
+            <a href="projects.html">Projektit</a>
+            <a href="cyber-lab.html">Cyber Lab</a>
+            <a href="about.html">Minusta</a>
+
+            <a href="https://github.com/valtteri-cybersecurity/mysql_siem"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
